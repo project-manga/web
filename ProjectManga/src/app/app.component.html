@@ -1,11 +1,37 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
-</div>
+<mat-sidenav-container class="example-container" fullscreen>
+    <mat-sidenav mode="side" opened>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <span>{{ title }}</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon matListIcon>home</mat-icon>
+                <a matLine href="#">Home</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>bookmark</mat-icon>
+                <a matLine href="#">Bookmarks</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>file_download</mat-icon>
+                <a matLine href="#">Downloads</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>list</mat-icon>
+                <a matLine href="#">Requests</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>settings</mat-icon>
+                <a matLine href="#">Settings</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>            
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </mat-sidenav-content>
+</mat-sidenav-container>
